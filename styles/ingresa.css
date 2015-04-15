@@ -1,0 +1,164 @@
+html{
+    background-color: #000000;
+}
+
+.clear{
+    clear: both;
+    line-height: 0;
+    font-size: 0;
+
+}
+
+body{
+    color: #636f6f;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*********************************header*************************************/
+header {
+    width:100%;
+    height: 100%;
+    margin:0 auto;
+    z-index:101;
+    background:url(../images/header.gif) 0 0 repeat;
+    padding:7px 0 12px 0;
+
+    display: block;
+    vertical-align: top;
+}
+
+.main {
+    width: 940px;
+    margin: 0 auto;
+    font-size: 30pt;
+}
+
+div.main h1 {
+    display:inline-block;
+    z-index:100;
+    float:left;
+    font-size: 40px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #636f6f;
+}
+
+h1{
+    font-size: 40px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #636f6f;
+}
+
+.social-icons {
+    overflow:hidden;
+    float:right;
+    padding:25px 0 0 0;
+}
+
+.social-icons span {
+    display:block;
+    font-size:18px;
+    line-height:24px;
+    color:#636f6f;
+    letter-spacing:-1px;
+    margin:-3px 15px 0 0;
+    text-align:right;
+    float:left;
+}
+
+.social-icons>div {
+    float:right;
+    overflow:hidden;
+}
+
+.social-icons a {
+    display:inline-block;
+    width:23px;
+    height:23px;
+    float:right;
+}
+
+.icon-1 {
+    background:url(../images/icon-1.png) 0 0 no-repeat;
+}
+
+.icon-2 {
+    background:url(../images/icon-2.png) 0 0 no-repeat;
+    margin-left:7px;
+}
+
+.icon-3 {
+    background:url(../images/icon-3.png) 0 0 no-repeat;
+    margin-left:7px;
+}
+
+.social-icons a:hover {
+    background-color:#ef6f53;
+}
+
+
+nav {
+    width:940px;
+    margin:0 auto;
+    z-index:100;
+    /* padding:5px 0 1px 0;*/
+}
+
+nav a{
+    text-decoration: none;
+}
+
+ul.menu {
+    display:inline-block;
+    list-style: none;
+    margin: 2px 0 0 0;
+}
+
+ul.menu li {
+    float:left;
+    line-height:24px;
+    margin:0 28px 0 4px;
+}
+
+ul.menu li a {
+    font-size:18px;
+    line-height:24px;
+    color:#fff;
+    text-transform:uppercase;
+    display:inline-block;
+    letter-spacing:-1px;
+}
+
+ul.menu li a:hover , ul.menu li.current a {
+    color:#ef6f53;
+}
+
+/*Contenido */
+.container_12{
+    margin-left:auto;
+    margin-right:auto;
+    width:700px
+}
+
+/* Botones */
+.button {
+    text-decoration: none;
+    background:#ef6f53;
+    color:#fff;
+    font-size:18px;
+    line-height:24px;
+    padding:4px 12px 10px 12px;
+    display:inline-block;
+}
+
+.button:hover {
+    background:#636f6f;
+}
+
+/*footer*/
+footer{
+    clear: both;
+    float: bottom;
+}
