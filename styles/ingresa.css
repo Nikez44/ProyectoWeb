@@ -1,5 +1,7 @@
 html{
     background-color: #000000;
+    height: 100%;
+    width: 100%;
 }
 
 .clear{
@@ -16,6 +18,7 @@ body{
 a{
     text-decoration: none;
 }
+
 
 /*********************************header*************************************/
 header {
@@ -139,7 +142,7 @@ ul.menu li a:hover , ul.menu li.current a {
 .container_12{
     margin-left:auto;
     margin-right:auto;
-    width:700px
+    width:500px
 }
 
 /* Botones */
@@ -149,7 +152,7 @@ ul.menu li a:hover , ul.menu li.current a {
     color:#fff;
     font-size:18px;
     line-height:24px;
-    padding:4px 12px 10px 12px;
+    padding:4px 12px 4px 12px;
     display:inline-block;
 }
 
@@ -157,8 +160,13 @@ ul.menu li a:hover , ul.menu li.current a {
     background:#636f6f;
 }
 
+#registrate{
+    margin-left: 50px;
+}
+
 /*footer*/
 footer{
     clear: both;
-    float: bottom;
+    position: absolute;
+    bottom: 0;
 }
