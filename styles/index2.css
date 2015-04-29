@@ -37,9 +37,9 @@ header {
 }
 
 h1 {
-    display:inline-block;
-    z-index:100;
-    float:left;
+    display: inline-block;
+    z-index: 100;
+    float: left;
     font-size: 40px;
     font-family: Tahoma, Geneva, sans-serif;
     color: #636f6f;

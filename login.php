@@ -11,7 +11,7 @@ $password = $_POST["password"];
 
 session_start();
 
-$conexion = mysql_connect("localhost","root","08001421");
+$conexion = mysql_connect("localhost","root","root");
 mysql_select_db("web",$conexion);
 
 

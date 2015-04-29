@@ -3,10 +3,11 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Game Center</title>
-
     <link rel="stylesheet" href="styles/index2.css"/>
 </head>
 <body>
+
+<?php session_start(); ?>
 
 <header>
     <div class="main">
@@ -28,21 +29,15 @@
         <li class="current"><a href="index3.php">Home</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Catalogo</a></li>
-        <li><a href="#">Servicios</a></li>
         <li><a href="#">Videos</a></li>
         <li><a href="#">Contacto</a></li>
 
-        <?php
-
-            session_start();
-
-            if(isset($_SESSION['login_user'])){
-                echo '<li class="session">Bienvenido '. $_SESSION['login_user'].' <a href="logout.php">Logout</a></li>';
-            }
-            else{
-                echo '<li><a href="ingresa.html">Login</a></li>';
-            }
-        ?>
+        <?php if(isset($_SESSION['login_user'])){ ?>
+            <li><a href="logout.php">Logout</a></li>
+            <li>Bienvenido <?php echo $_SESSION['login_user']; ?></li>
+        <?php } else { ?>
+            <li><a href="ingresa.html">Login</a></li>
+        <?php } ?>
 
     </ul>
     <div class="clear"></div>
