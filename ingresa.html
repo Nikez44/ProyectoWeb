@@ -5,6 +5,7 @@
     <title>Ingresa</title>
 
     <link rel="stylesheet" href="styles/ingresa.css"/>
+    <script type="text/javascript" src="scripts/login.js"></script>
 </head>
 <body>
 
@@ -25,7 +26,7 @@
 
     <nav>
         <ul class="menu">
-            <li class="current"><a href="index3.html">Home</a></li>
+            <li class="current"><a href="index3.php">Home</a></li>
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Catalogo</a></li>
             <li><a href="#">Servicios</a></li>
@@ -39,7 +40,7 @@
         <div class="container_12">
         <h1>Inicia Sesión</h1>
 
-        <form action="">
+        <form action="login.php" method="post" onsubmit="return validar()">
             <table>
                 <tr>
                     <td>

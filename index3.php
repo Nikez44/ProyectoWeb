@@ -25,12 +25,25 @@
 
 <nav>
     <ul class="menu">
-        <li class="current"><a href="index3.html">Home</a></li>
+        <li class="current"><a href="index3.php">Home</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Catalogo</a></li>
         <li><a href="#">Servicios</a></li>
         <li><a href="#">Videos</a></li>
         <li><a href="#">Contacto</a></li>
+
+        <?php
+
+            session_start();
+
+            if(isset($_SESSION['login_user'])){
+                echo '<li class="session">Bienvenido '. $_SESSION['login_user'].' <a href="logout.php">Logout</a></li>';
+            }
+            else{
+                echo '<li><a href="ingresa.html">Login</a></li>';
+            }
+        ?>
+
     </ul>
     <div class="clear"></div>
 </nav>
