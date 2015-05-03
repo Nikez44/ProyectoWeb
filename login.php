@@ -22,11 +22,10 @@ $comprobar = mysql_query($sql);
 if(mysql_num_rows($comprobar) > 0)
 {
     $_SESSION['login_user']= $usuario;
-
     header("Location: index3.php");
 }
 else{
-    echo mysql_num_rows($comprobar);
-    header("Location: ingresa.html");
+    header("Location: ingresa.html?error=1");
+
 }
 ?>

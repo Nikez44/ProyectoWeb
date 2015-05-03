@@ -6,7 +6,15 @@ function validar(){
     var usuario = document.getElementById("usuario").value;
     var contra = document.getElementById("password").value;
 
+    /*
     if(!validarForm(usuario, contra)){
+        return false;
+    }*/
+
+    if(notSecurePassword(contra)){
+        alert("La contraseña debe ser de almenos 8 caracteres");
+        contra.select();
+        contra.focus();
         return false;
     }
 }
@@ -21,9 +29,7 @@ function vacio(word) {
 }
 
 function notSecurePassword(word){
-    if(word.length <8){
-        alert("La contraseña debe ser de almenos 8 caracteres");
-    }
+    return word.length <8;
 }
 
 function validarForm(usuario, contra){
