@@ -6,15 +6,15 @@ function validar(){
     var usuario = document.getElementById("usuario").value;
     var contra = document.getElementById("password").value;
 
-    /*
+
     if(!validarForm(usuario, contra)){
         return false;
-    }*/
+    }
 
     if(notSecurePassword(contra)){
         alert("La contraseña debe ser de almenos 8 caracteres");
-        contra.select();
-        contra.focus();
+        document.getElementsByName("password").value ="";
+        document.fValida.password.focus();
         return false;
     }
 }
