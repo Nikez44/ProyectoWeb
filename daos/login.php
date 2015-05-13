@@ -23,7 +23,7 @@ if($result->num_rows > 0){
 
     $_SESSION['login_user']= $usuario['name'];
     $_SESSION['admin']= $usuario['admin'];
-    header("Location: index.php");
+    header("Location: ../index.php");
 
 }else{
     header("Location: ingresa.php?error=1");

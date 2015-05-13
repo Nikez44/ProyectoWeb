@@ -11,18 +11,6 @@
 
     <?php include '_header.php' ?>
 
-    <nav>
-        <ul class="menu">
-            <li class="current"><a href="index.php">Home</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Catalogo</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-        <div class="clear"></div>
-    </nav>
-
     <section id="content">
         <div class="container_12">
         <h1>Inicia Sesión</h1>

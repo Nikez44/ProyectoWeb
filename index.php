@@ -15,43 +15,6 @@
 
 <?php include '_header.php' ?>
 
-<div id="slide">
-    <div class="slider">
-        <ul class="items">
-            <li><img src="images/maxresdefault.jpg" alt="" /></li>
-           <!-- <li><img src="images/Logo-Halo-4.jpg" alt="" /><div class="banner"><p class="extra-wrap"><strong>Halo 5 se aproxima</strong><span>Halo 5 saldrá a finales de este año o principios del 2016</span></p><a href="#">Leer más</a></div></li>
-            <li><img src="images/Gears3.jpg" alt="" /><div class="banner"><p class="extra-wrap"><strong>Nuevo gears of war</strong><span>El nuevo gears of war será exclusivo para la plataforma de xbox one</span></p><a href="#">Leer más</a></div></li>-->
-        </ul>
-    </div>
-    <a href="#" class="prev"></a><a href="#" class="next"></a>
-</div>
-
-<!---- <div id="slideshow">
-	<div id="foobar">
-            <div id="col1"><a href="#" class="previous" style="color: #ffffff">&nbsp;</a></div>
-		<div id	="col2">
-			<div class="viewer">
-				<div class="reel">
-                                    <div class="slide"><img src="images/maxresdefault.jpg" width="726" height="335" alt="" /> <span>LOS MEJORES JUEGOS</span> </div>
-                                    <div class="slide"><img src="images/Gears3.jpg" width="726" height="335" alt="" /> <span>LA MEJOR ACCI�N EN VIDEOJUEGOS</span> </div>
-                                    <div class="slide"><img src="images/Logo-Halo-4.jpg" width="726" height="335" alt="" /> <span>LO M�S POPULAR</span> </div>
-				</div>
-			</div>
-		</div>
-		<div id="col3"><a href="#" class="next">&nbsp;</a></div>
-	</div>
-	<script type="text/javascript">
-		$('#foobar').slidertron({
-		viewerSelector:		'.viewer',
-		reelSelector:		'.viewer .reel',
-		slidesSelector:		'.viewer .reel .slide',
-		navPreviousSelector:'.previous',
-		navNextSelector:	'.next',
-		navFirstSelector:	'.first',
-		navLastSelector:	'.last'
-		});
-	</script>
-</div>  -->
 <div id="slider">
     <ul class="bxslider">
   <li><img src="images/maxresdefault.jpg" width="1350" height="620" style="text-align:center;"/></li>
