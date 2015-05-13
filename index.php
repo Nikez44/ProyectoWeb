@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Game Center</title>
-    <link rel="stylesheet" href="styles/index2.css"/>
+    <link rel="stylesheet" href="styles/index.css"/>
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 
 <header>
     <div class="main">
-        <h1><a href="index.html"></a>GAME CENTER</h1>
+        <h1><a href="index3.html"></a>GAME CENTER</h1>
         <div class="social-icons">
             <span>Siguenos:</span>
             <div>
@@ -26,7 +26,7 @@
 
 <nav>
     <ul class="menu">
-        <li class="current"><a href="index3.php">Home</a></li>
+        <li class="current"><a href="index.php">Home</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Catalogo</a></li>
         <li><a href="#">Videos</a></li>

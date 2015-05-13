@@ -14,6 +14,6 @@ if(isset($_SESSION['id'])){
     unset($_SESSION['id']);
 }
 
-header("Location: index3.php");
+header("Location: index.php");
 
 ?>
