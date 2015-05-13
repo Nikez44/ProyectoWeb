@@ -7,14 +7,14 @@
  */
 
 
-$conexion = mysql_connect("localhost", "root", "08001421");
-mysql_select_db("web", $conexion);
+$conexion = mysql_connect("localhost", "root", "root");
+mysql_select_db("proyectoweb", $conexion);
 
 
 if ($_POST['Nombre'] == '' or $_POST['Apellidos'] == '' or $_POST['email'] == '' or $_POST['password'] == '') {
     echo 'Por favor llene todos los campos.';
 } else {
-    $sql = 'SELECT * FROM users';
+    $sql = 'SELECT * FROM usuarios';
     $rec = mysql_query($sql);
     $existe_Usuario = false;
 
@@ -32,7 +32,7 @@ if ($_POST['Nombre'] == '' or $_POST['Apellidos'] == '' or $_POST['email'] == ''
             $apellido = $_POST['Apellidos'];
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $sql = "INSERT INTO users (usuario_nombre,usuario_apellido,usuario_clave, usuario_email) VALUES ('$nombre','$apellido', '$password', '$email')";
+            $sql = "INSERT INTO `proyectoweb`.`usuarios` (`name`, `apellido`, `email`, `password`, `admin`) VALUES ('$nombre', '$apellido', '$email', '$password', '0')";
             mysql_query($sql);
 
             echo 'Usted se ha registrado correctamente.';

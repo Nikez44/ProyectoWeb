@@ -12,7 +12,7 @@ session_start();
 
 <header>
     <div class="main">
-        <h1><a href="index3.html"></a>GAME CENTER</h1>
+        <h1><a href="index.php"></a>GAME CENTER</h1>
         <div class="social-icons">
             <span>Siguenos:</span>
             <div>
