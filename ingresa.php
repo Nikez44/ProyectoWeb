@@ -9,38 +9,13 @@
 </head>
 <body>
 
-    <header>
-        <div class="main">
-            <h1><a href="index.php"></a>GAME CENTER</h1>
-            <div class="social-icons">
-                <span>Siguenos:</span>
-                <div>
-                    <a href="#" class="icon-3"></a>
-                    <a href="#" class="icon-2"></a>
-                    <a href="#" class="icon-1"></a>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </header>
-
-    <nav>
-        <ul class="menu">
-            <li class="current"><a href="index.php">Home</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Catalogo</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-        <div class="clear"></div>
-    </nav>
+    <?php include '_header.php' ?>
 
     <section id="content">
         <div class="container_12">
         <h1>Inicia Sesión</h1>
 
-        <form action="login.php" method="post" onsubmit="return validar()">
+        <form action="daos/login.php" method="post" onsubmit="return validar()">
             <table>
                 <tr>
                     <td>
@@ -64,7 +39,7 @@
             </table>
            <p></p>
             <input type="submit" class="button" value="Entrar"/>
-            <input type="button" class="button" id="registrate"  value="Registrate!"/>
+            <a href="registra.php" class="button">Registrate!</a>
         </form>
         </div>
     </section>

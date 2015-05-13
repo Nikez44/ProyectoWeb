@@ -6,7 +6,7 @@
  * Time: 10:12 AM
  */
 
-include 'daos/global.php';
+include 'global.php';
 
 session_start();
 
@@ -26,6 +26,6 @@ if($result->num_rows > 0){
     header("Location: index.php");
 
 }else{
-    header("Location: ingresa.html?error=1");
+    header("Location: ingresa.php?error=1");
 }
 ?>

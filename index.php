@@ -7,41 +7,7 @@
 </head>
 <body>
 
-<?php session_start(); ?>
-
-<header>
-    <div class="main">
-        <h1><a href="index3.html"></a>GAME CENTER</h1>
-        <div class="social-icons">
-            <span>Siguenos:</span>
-            <div>
-                <a href="#" class="icon-3"></a>
-                <a href="#" class="icon-2"></a>
-                <a href="#" class="icon-1"></a>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-</header>
-
-<nav>
-    <ul class="menu">
-        <li class="current"><a href="index.php">Home</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Catalogo</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Contacto</a></li>
-
-        <?php if(isset($_SESSION['login_user'])){ ?>
-            <li><a href="logout.php">Logout</a></li>
-            <li>Bienvenido <?php echo $_SESSION['login_user']; ?></li>
-        <?php } else { ?>
-            <li><a href="ingresa.html">Login</a></li>
-        <?php } ?>
-
-    </ul>
-    <div class="clear"></div>
-</nav>
+<?php include '_header.php' ?>
 
 <div id="slide">
     <div class="slider">
@@ -89,7 +55,7 @@
                 algo para ti, ¡forma parte de nosotros!</p>
             <a href="#" class="button top-3">Registrate</a>
                 ó   
-            <a href="ingresa.html" class="button">Ingresa</a>
+            <a href="ingresa.php" class="button">Ingresa</a>
         </div>
 
         <div class="grid_4">
