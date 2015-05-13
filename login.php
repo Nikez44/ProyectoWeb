@@ -11,7 +11,7 @@ $password = $_POST["password"];
 
 session_start();
 
-$conexion = mysql_connect("localhost","root","08001421");
+$conexion = mysql_connect("localhost","root","");
 mysql_select_db("web",$conexion);
 
 
@@ -23,7 +23,7 @@ if(mysql_num_rows($comprobar) > 0)
 {
     $_SESSION['login_user']= $usuario;
 
-    header("Location: index3.php");
+    header("Location: index.php");
 }
 else{
     echo mysql_num_rows($comprobar);
