@@ -39,7 +39,7 @@
             </table>
            <p></p>
             <input type="submit" class="button" value="Entrar"/>
-            <a href="registra.php" class="button">Registrate!</a>
+            <a href="Registra.php" class="button">Registrate!</a>
         </form>
         </div>
     </section>
