@@ -7,25 +7,17 @@
  */
 
 
-$conexion = mysql_connect("localhost", "root", "root");
-mysql_select_db("proyectoweb", $conexion);
+include 'global.php';
 
 
 if ($_POST['Nombre'] == '' or $_POST['Apellidos'] == '' or $_POST['email'] == '' or $_POST['password'] == '') {
     echo 'Por favor llene todos los campos.';
 } else {
-    $sql = 'SELECT * FROM usuarios';
-    $rec = mysql_query($sql);
-    $existe_Usuario = false;
+    $sql = "SELECT * FROM usuarios WHERE email = '$_POST[email]'";
+    $result = ejecutar_query($sql);
 
-    while ($result = mysql_fetch_object($rec)) {
-        if ($result->email == $_POST['email']) {
-            $existe_Usuario = true;
-        }
-    }
 
-    if (!$existe_Usuario) {
-
+    if($result->num_rows > 0){
         if($_POST['password'] == $_POST['password2'])
         {
             $nombre = $_POST['Nombre'];
@@ -33,7 +25,7 @@ if ($_POST['Nombre'] == '' or $_POST['Apellidos'] == '' or $_POST['email'] == ''
             $email = $_POST['email'];
             $password = $_POST['password'];
             $sql = "INSERT INTO `proyectoweb`.`usuarios` (`name`, `apellido`, `email`, `password`, `admin`) VALUES ('$nombre', '$apellido', '$email', '$password', '0')";
-            mysql_query($sql);
+            ejecutar_query($sql);
 
             echo 'Usted se ha registrado correctamente.';
 
