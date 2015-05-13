@@ -3,7 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Game Center</title>
-    <link rel="stylesheet" href="styles/index.css"/>
+    <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.slidertron-0.1.js"></script>
+    <script type="text/javascript" src="scripts/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="styles/index2.css"/>
+    <link rel="stylesheet" href="styles/slidertron.css"/>
+    <link rel="stylesheet" href="styles/jquery.bxslider.css"/>
+    
 </head>
 <body>
 
@@ -20,6 +26,40 @@
     <a href="#" class="prev"></a><a href="#" class="next"></a>
 </div>
 
+<!---- <div id="slideshow">
+	<div id="foobar">
+            <div id="col1"><a href="#" class="previous" style="color: #ffffff">&nbsp;</a></div>
+		<div id	="col2">
+			<div class="viewer">
+				<div class="reel">
+                                    <div class="slide"><img src="images/maxresdefault.jpg" width="726" height="335" alt="" /> <span>LOS MEJORES JUEGOS</span> </div>
+                                    <div class="slide"><img src="images/Gears3.jpg" width="726" height="335" alt="" /> <span>LA MEJOR ACCI�N EN VIDEOJUEGOS</span> </div>
+                                    <div class="slide"><img src="images/Logo-Halo-4.jpg" width="726" height="335" alt="" /> <span>LO M�S POPULAR</span> </div>
+				</div>
+			</div>
+		</div>
+		<div id="col3"><a href="#" class="next">&nbsp;</a></div>
+	</div>
+	<script type="text/javascript">
+		$('#foobar').slidertron({
+		viewerSelector:		'.viewer',
+		reelSelector:		'.viewer .reel',
+		slidesSelector:		'.viewer .reel .slide',
+		navPreviousSelector:'.previous',
+		navNextSelector:	'.next',
+		navFirstSelector:	'.first',
+		navLastSelector:	'.last'
+		});
+	</script>
+</div>  -->
+<div id="slider">
+    <ul class="bxslider">
+  <li><img src="images/maxresdefault.jpg" width="1350" height="620" style="text-align:center;"/></li>
+  <li><img src="images/Gears3.jpg" width="1350" height="620" /></li>
+  <li><img src="images/Logo-Halo-4.jpg" width="1350" height="620" /></li>
+  
+</ul>
+</div>
 <!--==============================content================================-->
 <section id="content">
 
@@ -100,6 +140,13 @@
         </div>
         <div class="clear"></div>
     </div>
+    <script>
+$(document).ready(function(){
+  $('.bxslider').bxSlider({
+    auto: true
+  });
+});
+    </script>
 </section>
 
 <!--==============================content================================-->
