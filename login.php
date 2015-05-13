@@ -6,26 +6,26 @@
  * Time: 10:12 AM
  */
 
-$usuario = $_POST["usuario"];
-$password = $_POST["password"];
+include 'daos/global.php';
 
 session_start();
 
-$conexion = mysql_connect("localhost","root","08001421");
-mysql_select_db("web",$conexion);
+$usuario = $_POST["usuario"];
+$password = $_POST["password"];
 
+$sql = "SELECT `name`, `password` FROM usuarios WHERE `name` = '$usuario' AND `password`='$password'";
 
-$sql = "SELECT usuario_nombre,usuario_clave FROM users WHERE usuario_email = '$usuario' AND usuario_clave='$password'";
+$result = ejecutar_query($sql);
 
-$comprobar = mysql_query($sql);
+if($result->num_rows > 0){
 
-if(mysql_num_rows($comprobar) > 0)
-{
-    $_SESSION['login_user']= $usuario;
+    $usuario = $result->fetch_assoc();
+
+    $_SESSION['login_user']= $usuario['name'];
+    $_SESSION['admin']= $usuario['admin'];
     header("Location: index.php");
-}
-else{
-    header("Location: ingresa.html?error=1");
 
+}else{
+    header("Location: ingresa.html?error=1");
 }
 ?>
