@@ -35,8 +35,8 @@ session_start();
 
             <?php if ($_SESSION['admin'] == 1 ) {?>
 
-                <li><a href="#">Juegos</a></li>
-                <li><a href="#">Usuarios</a></li>
+                <li><a href="juegos.php">Juegos</a></li>
+                <li><a href="usuarios.php">Usuarios</a></li>
             <?php } else {
                 echo $_SESSION['admin']?>
                 <li><a href="#">Ver Carrito</a></li>
