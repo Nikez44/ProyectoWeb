@@ -27,15 +27,24 @@ session_start();
 
 <nav>
     <ul class="menu">
+
         <li class="current"><a href="index.php">Home</a></li>
-        <li><a href="#">Nosotros</a></li>
         <li><a href="#">Catalogo</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Contacto</a></li>
 
         <?php if(isset($_SESSION['login_user'])){ ?>
+
+            <?php if ($_SESSION['admin'] == 1 ) {?>
+
+                <li><a href="#">Juegos</a></li>
+                <li><a href="#">Usuarios</a></li>
+            <?php } else {
+                echo $_SESSION['admin']?>
+                <li><a href="#">Ver Carrito</a></li>
+            <?php } ?>
+
             <li><a href="logout.php">Logout</a></li>
             <li>Bienvenido <?php echo $_SESSION['login_user']; ?></li>
+
         <?php } else { ?>
             <li><a href="ingresa.php">Login</a></li>
         <?php } ?>

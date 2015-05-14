@@ -64,9 +64,7 @@
     </div>
 </section>
 
-<!--==============================content================================-->
-<footer>
-    <p id="copyright">&copy; 2015 Game Center</p>
-</footer>
+<?php include '_footer.php' ?>
+
 </body>
 </html>

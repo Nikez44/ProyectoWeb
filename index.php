@@ -6,7 +6,7 @@
     <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="scripts/jquery.slidertron-0.1.js"></script>
     <script type="text/javascript" src="scripts/jquery.bxslider.js"></script>
-    <link rel="stylesheet" href="styles/index2.css"/>
+    <link rel="stylesheet" href="styles/index.css"/>
     <link rel="stylesheet" href="styles/slidertron.css"/>
     <link rel="stylesheet" href="styles/jquery.bxslider.css"/>
     
@@ -112,10 +112,7 @@ $(document).ready(function(){
     </script>
 </section>
 
-<!--==============================content================================-->
-<footer>
-    <p id="copyright">&copy; 2015 Game Center</p>
-</footer>
+    <?php include '_footer.php' ?>
 
 </body>
 </html>
