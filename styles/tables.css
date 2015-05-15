@@ -1,0 +1,44 @@
+.btn_table{
+    display: inline-block;
+    float: right;
+}
+
+h2{
+    font-size: 40px;
+    margin: 0;
+}
+
+.title{
+    text-transform: uppercase;
+    display: inline-block;
+    float: left;
+    margin-left: 40px;
+}
+
+.wrap-table{
+    border-top: solid #ffffff;
+}
+
+table{
+    width: 100%;
+}
+
+thead{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+td {
+    border: 1px solid #636f6f;
+}
+
+
+
+
+
+#content {
+    width:960px;
+    margin:0 auto;
+    padding:10px 0 20px 0;
+    position:relative;
+}

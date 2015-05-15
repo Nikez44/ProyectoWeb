@@ -17,70 +17,55 @@ include 'daos/show_all_juegos.php';
     <title>Juegos</title>
 
     <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="styles/tables.css"/>
+
 </head>
 <body>
 
     <?php include '_header.php' ?>
 
-    <a href="#" class="button">Nuevo Juego</a>
+    <div class="table_up" id="content">
+        <h2 class="title">Juegos</h2>
 
-    <table>
-        <thead>
-            <tr>
-                <td>
-                    Nombre
-                </td>
-                <td>
-                    Precio
-                </td>
-                <td>
-                    Cantidad
-                </td>
-                <td>
-                    Imagen
-                </td>
-                <td>
-                    Categoria
-                </td>
-                <td>
-                    Consola
-                </td>
-                <td>
-                    Operaciones
-                </td>
-            </tr>
-        </thead>
+        <a href="#" class="button btn_table">Nuevo Juego</a>
+        <div class="clear"></div>
+    </div>
 
-        <tbody>
+    <div class="wrap-table" id="content">
+        <table align="center">
+            <thead>
+                <tr>
+                    <td> Nombre </td>
+                    <td> Precio </td>
+                    <td> Cantidad </td>
+                    <td> Imagen </td>
+                    <td> Categoria </td>
+                    <td> Consola </td>
+                    <td> Operaciones </td>
+                </tr>
+            </thead>
+
+            <tbody>
             <?php foreach($juegos as $juego): ?>
                 <tr>
-                    <td>
-                        <?php echo $juego['nombre'] ?>
-                    </td>
-                    <td>
-                        <?php echo $juego['precio'] ?>
-                    </td>
-                    <td>
-                        <?php echo $juego['cantidad'] ?>
-                    </td>
-                    <td>
-                        <?php echo $juego['imagen'] ?>
-                    </td>
-                    <td>
-                        <?php echo $juego['categoria_id'] ?>
-                    </td>
-                    <td>
-                        <?php echo $juego['consola_id'] ?>
-                    </td>
+                    <td> <?php echo $juego['nombre'] ?> </td>
+                    <td> <?php echo $juego['precio'] ?> </td>
+                    <td> <?php echo $juego['cantidad'] ?> </td>
+                    <td> <?php echo $juego['imagen'] ?> </td>
+                    <td> <?php echo $juego['categoria_id'] ?> </td>
+                    <td> <?php echo $juego['consola_id'] ?> </td>
                     <td>
                         <a href="#">Modificar</a>
                         <a href="#">Eliminar</a>
                     </td>
                 </tr>
             <?php endforeach ?>
-        </tbody>
+            </tbody>
 
-    </table>
+        </table>
+    </div>
+
+
 
     <?php include '_footer.php'?>
 
