@@ -27,7 +27,7 @@ include 'daos/show_all_juegos.php';
     <div class="table_up" id="content">
         <h2 class="title">Juegos</h2>
 
-        <a href="#" class="button btn_table">Nuevo Juego</a>
+        <a href="altaJuego.php" class="button btn_table">Nuevo Juego</a>
         <div class="clear"></div>
     </div>
 
@@ -52,8 +52,8 @@ include 'daos/show_all_juegos.php';
                     <td> <?php echo $juego['precio'] ?> </td>
                     <td> <?php echo $juego['cantidad'] ?> </td>
                     <td> <?php echo $juego['imagen'] ?> </td>
-                    <td> <?php echo $juego['categoria_id'] ?> </td>
-                    <td> <?php echo $juego['consola_id'] ?> </td>
+                    <td> <?php echo $juego['nombre_categoria'] ?> </td>
+                    <td> <?php echo $juego['nombre_consola'] ?> </td>
                     <td>
                         <a href="#">Modificar</a>
                         <a href="#">Eliminar</a>
