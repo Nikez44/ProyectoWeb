@@ -16,6 +16,7 @@ include 'daos/show_all_juegos.php';
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="styles/catalogo.css"/>
 </head>
 <body>
 
@@ -23,17 +24,18 @@ include 'daos/show_all_juegos.php';
 
     <center>
     <div class="catalogo">
-
-        <ul>
+        <ul class="catalog-list">
             <?php foreach($juegos as $juego): ?>
                 <li>
-                    <img src=" <?php echo $juego['imagen'] ?> ">
-                    <h3><?php echo $juego['nombre'] ?></h3>
-                    <p></p>
-                    <h4><?php echo $juego['categoria_id'] ?></h4>
-                    <h5><?php echo $juego['consola_id'] ?></h5>
-                    <h4><?php echo $juego['precio'] ?></h4>
-                    <button>Comprar</button>
+                    <div class="Catalog-Item">
+                        <div class="Game-Image"><img src=" <?php echo $juego['imagen'] ?> "></div>
+                        <div class="Catalog-Title"><h1><?php echo $juego['nombre'] ?></h1></div>
+                        <div class="Catalog-Category"><h4><?php echo $juego['categoria_id'] ?></h4></div>
+                        <div class="Catalog-Console"><h5><?php echo $juego['consola_id'] ?></h5></div>
+                        <div class="Catalog-Price"><h4><?php echo $juego['precio'] ?></h4></div>
+
+                        <button onclick="location.href = 'Juego.html';">Comprar</button>
+                    </div>
                 </li>
             <?php endforeach ?>
         </ul>
