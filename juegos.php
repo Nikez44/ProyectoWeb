@@ -56,7 +56,7 @@ include 'daos/show_all_juegos.php';
                     <td> <?php echo $juego['nombre_consola'] ?> </td>
                     <td>
                         <a href="#">Modificar</a>
-                        <a href="#">Eliminar</a>
+                        <a href="daos/eliminarJuego.php?id=<?php echo $juego['id'] ?>">Eliminar</a>
                     </td>
                 </tr>
             <?php endforeach ?>
