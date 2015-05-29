@@ -22,15 +22,15 @@ $consola = $_POST["consola"];
          
       //recojo la imagen
       $imagen = $_FILES['img1']['name'];
-      //Obtengo el nombre de la imagen y la extensión de la foto
+      //Obtengo el nombre de la imagen y la extensiï¿½n de la foto
       $imagen1 = explode(".",$imagen);
       if(($imagen1[1] == "jpg") || ($imagen1[1] == "png")){
-              //Genero un nombre aleatorio con números y se asigno la extensión obtenida anteriormente
+              //Genero un nombre aleatorio con nï¿½meros y se asigno la extensiï¿½n obtenida anteriormente
               $imagen2 = rand(0,9).rand(100,9999).rand(100,9999).".".$imagen1[1];
             //Coloco la imagen en la carpeta correspondiente con el nuevo nombre
             move_uploaded_file($_FILES['img1']['tmp_name'], "../images/".$imagen2);
             //Asigno a la foto permisos
-            $ruta="../images/".$imagen2;
+            $ruta="images/".$imagen2;
             
                 
             $query = "Insert into juegos (nombre, precio, cantidad, imagen, categoria_id, consola_id) values('$nombre','$precio','$cantidad','$ruta','$categoria','$consola')";
@@ -40,7 +40,7 @@ $consola = $_POST["consola"];
             echo "<link rel='stylesheet' href='../styles/tables.css'/>";
             echo include '../_header.php';
             echo "<p>EL JUEGO HA SIDO DE ALTA EXITOSAMENTE</p><p><a href='altaJuego.php'>DAR DE ALTA A OTRO JUEGO</a></p>";
-            echo "<p><a href='juegos.php'>MENÚ DE JUEGOS</a></p>";
+            echo "<p><a href='juegos.php'>MENï¿½ DE JUEGOS</a></p>";
             echo include '../_footer.php';
             }else{
                   echo "<br><br><p align='center'><span style='color:red;font-size:28px;'>Solo se permiten fotograf&iacute;as .jpg y .png</span></p>";

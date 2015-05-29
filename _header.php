@@ -29,7 +29,7 @@ session_start();
     <ul class="menu">
 
         <li class="current"><a href="index.php">Home</a></li>
-        <li><a href="#">Catalogo</a></li>
+        <li><a href="catalogo.php">Catalogo</a></li>
 
         <?php if(isset($_SESSION['login_user'])){ ?>
 
