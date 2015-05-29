@@ -1,6 +1,9 @@
 .catalogo{
-    margin: 60px auto 15px;
-    width: 768px;
+    width: 100%;
+    margin: 0px;
+    display: inline-block;
+    position:relative;
+
 }
 
 .catalogo h1{
@@ -19,63 +22,22 @@
     position: relative;
 }
 
+.catalogo li{
+    float:left;
+    display:inline;
+}
+
 /**
 ------Estilos de cada item----
 
 */
 
-.catalog-list:before{
-    content: '';
-    width: 2px;
-    height: 100%;
-    background: #c7cacb;
-    position: absolute;
-    left: 32px;
-    top: 0;
-}
-
-.catalog-list:after{
-    content: '';
-    position: absolute;
-    background: #c7cacb;
-    bottom: 0;
-    left: 27px;
-    width: 7px;
-    height: 7px;
-    border: 3px solid #dee1e3;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-}
-
-.catalog-list li{
-    margin-bottom: 15px;
-    display: block;
-    position: relative;
-}
-
-.catalog-list li:after{
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
-    width: 0;
-}
-
 .catalog-list .Game-Image{
     width: 200px;
     height: 200px;
+    margin-top: 20px;
     position: relative;
-    z-index: 99;
-    float: left;
-    border: 3px solid #FFF;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    overflow: hidden;
+    float: inherit;
 }
 
 .catalog-list .Game-Image img{
@@ -83,54 +45,23 @@
     height: 100%;
 }
 
-.Catalog-Item{
-    border: solid;
-}
-
-.Catalog-Item:after{
-    content: '';
-    width: 0;
-    height: 0;
-    display: block;
-    clear: both;
-}
-
 .Catalog-Item .Catalog-Title{
-    padding: 10px 12px;
-    border-bottom: 1px;
-    overflow: hidden;
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
+    padding: 12px 12px;
+    position: inherit;
+    margin: 0;
 }
 
 .Catalog-Item .Catalog-Title h1{
-    float: left;
-    margin-left: 14px;
-    position: relative;
-    top: 2px;
-    color: #c7cacb;
-    cursor: pointer;
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
+    float: inherit;
+    color: blueviolet;
+    margin: 0;
 }
 
 .Catalog-Item .Catalog-Category{
-    border-bottom: 1px;
+    margin: 0;
     overflow: hidden;
 }
 
-.Catalog-Item .Catalog-Category h4{
-    float: left;
-    margin-left: 14px;
-}
-
-.Catalog-Item .Catalog-Console h5{
-    float: left;
-    margin-left: 14px;
-}
-
-.Catalog-Item button{
-    margin: 10px;
+#triple li{
+    width:33.333%;
 }
