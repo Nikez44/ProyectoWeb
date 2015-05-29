@@ -1,0 +1,37 @@
+.imageGame img{
+    width: 500px;
+    height: 700px;
+    margin: 50px;
+    position: relative;
+    float: left;
+}
+
+.info{
+    width: 35%;
+    height: 800px;
+    margin: 20px;
+    display: inline-block;
+    position:relative;
+}
+
+.info h1{
+    font-size: 36px;
+    color: darkorchid;
+    font-weight: 400;
+}
+
+.info h2{
+    margin: 20px 0 20px 0;
+}
+
+.info h3{
+    margin: 20px 0 20px 0;
+}
+
+.info h4{
+    margin: 20px 0 20px 0;
+}
+
+.info button{
+    margin: 30px;
+}

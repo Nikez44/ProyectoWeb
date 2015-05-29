@@ -22,6 +22,7 @@ if($result->num_rows > 0){
     $usuario = $result->fetch_array();
 
     $_SESSION['login_user'] = $usuario['name'];
+    $_SESSION['u_id']= $usuario['id'];
     $_SESSION['admin'] = $usuario['admin'];
     header("Location: ../index.php");
 

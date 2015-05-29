@@ -30,11 +30,11 @@ include 'daos/show_all_juegos.php';
                     <div class="Catalog-Item">
                         <div class="Game-Image"><img src=" <?php echo $juego['imagen'] ?> "></div>
                         <div class="Catalog-Title"><h1><?php echo $juego['nombre'] ?></h1></div>
-                        <div class="Catalog-Category"><h2>Categoria: <?php echo $juego['categoria_id'] ?></h2></div>
-                        <div class="Catalog-Console"><h3>Disponible para: <?php echo $juego['consola_id'] ?></h3></div>
+                        <div class="Catalog-Category"><h2>Categoria: <?php echo $juego['nombre_categoria'] ?></h2></div>
+                        <div class="Catalog-Console"><h3>Disponible para: <?php echo $juego['nombre_consola'] ?></h3></div>
                         <div class="Catalog-Price"><h3>Precio: <?php echo $juego['precio'] ?></h3></div>
 
-                        <button class="button" onclick="location.href = 'Juego.html';">Comprar</button>
+                        <button class="button" onclick="location.href = 'game.php?g_id=<?php echo $juego['id'] ?>';">Comprar</button>
                     </div>
                 </li>
             <?php endforeach ?>
