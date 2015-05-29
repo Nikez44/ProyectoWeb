@@ -6,7 +6,6 @@
  * Time: 11:49 AM
  */
 
-
 include 'global.php';
 
 $nombre = $_POST['Nombre'];

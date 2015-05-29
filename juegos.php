@@ -6,6 +6,7 @@
  * Time: 07:04 PM
  */
 
+include 'daos/global.php';
 include 'daos/show_all_juegos.php';
 
 ?>
@@ -55,7 +56,7 @@ include 'daos/show_all_juegos.php';
                     <td> <?php echo $juego['nombre_categoria'] ?> </td>
                     <td> <?php echo $juego['nombre_consola'] ?> </td>
                     <td>
-                        <a href="#">Modificar</a>
+                        <a href="modificarJuego.php?id=<?php echo $juego['id'] ?>">Modificar</a>
                         <a href="daos/eliminarJuego.php?id=<?php echo $juego['id'] ?>">Eliminar</a>
                     </td>
                 </tr>

@@ -6,7 +6,7 @@
  * Time: 07:22 PM
  */
 
-
+include 'daos/global.php';
 include 'daos/show_all_usuarios.php';
 
 ?>

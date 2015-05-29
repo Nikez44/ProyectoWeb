@@ -1,7 +1,7 @@
 <?php
 
+include 'daos/global.php';
 include 'daos/show_all_categorias.php';
-
 include 'daos/show_all_consolas.php';
 
 ?>

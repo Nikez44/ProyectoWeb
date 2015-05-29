@@ -6,7 +6,7 @@
  * Time: 01:01 PM
  */
 
-include 'global.php';
+
 
 if (isset($_GET['g_id'])){
     $Game_id= $_GET['g_id'];

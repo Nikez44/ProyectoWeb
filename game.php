@@ -6,6 +6,7 @@
  * Time: 07:04 PM
  */
 
+include 'daos/global.php';
 include 'daos/checkLogin.php';
 include 'daos/search_specific_game.php';
 

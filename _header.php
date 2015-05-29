@@ -40,7 +40,7 @@ session_start();
                 <li><a href="#">Ver Carrito</a></li>
             <?php } ?>
 
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="daos/logout.php">Logout</a></li>
             <li>Bienvenido <?php echo $_SESSION['login_user']; ?></li>
 
         <?php } else { ?>

@@ -6,7 +6,6 @@
  * Time: 07:04 PM
  */
 
-include 'global.php';
 
 $query = "select juegos.id, juegos.nombre, juegos.precio, juegos.cantidad, juegos.imagen, juegos.categoria_id,
         juegos.consola_id, categoria.nombre AS 'nombre_categoria', consola.nombre AS 'nombre_consola' 

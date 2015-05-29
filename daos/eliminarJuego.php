@@ -6,7 +6,7 @@
  * Time: 10:30 PM
  */
 
-include 'global.php';
+
 
 $id = $_GET['id'];
 
