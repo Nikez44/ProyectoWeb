@@ -28,9 +28,9 @@ $consola = $_POST["consola"];
               //Genero un nombre aleatorio con n�meros y se asigno la extensi�n obtenida anteriormente
               $imagen2 = rand(0,9).rand(100,9999).rand(100,9999).".".$imagen1[1];
             //Coloco la imagen en la carpeta correspondiente con el nuevo nombre
-            move_uploaded_file($_FILES['img1']['tmp_name'], "../images/".$imagen2);
+            move_uploaded_file($_FILES['img1']['tmp_name'], "../images/games/".$imagen2);
             //Asigno a la foto permisos
-            $ruta="images/".$imagen2;
+            $ruta="images/games/".$imagen2;
             
                 
             $query = "Insert into juegos (nombre, precio, cantidad, imagen, categoria_id, consola_id) values('$nombre','$precio','$cantidad','$ruta','$categoria','$consola')";

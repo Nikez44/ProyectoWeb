@@ -23,7 +23,6 @@ include 'daos/show_all_juegos.php';
     <?php include '_header.php' ?>
 
     <center>
-
     <div class="catalogo">
         <ul class="catalog-list" id="triple">
             <?php foreach($juegos as $juego): ?>
@@ -35,7 +34,7 @@ include 'daos/show_all_juegos.php';
                         <div class="Catalog-Console"><h3>Disponible para: <?php echo $juego['consola_id'] ?></h3></div>
                         <div class="Catalog-Price"><h3>Precio: <?php echo $juego['precio'] ?></h3></div>
 
-                        <button onclick="location.href = 'Juego.html';">Comprar</button>
+                        <button class="button" onclick="location.href = 'Juego.html';">Comprar</button>
                     </div>
                 </li>
             <?php endforeach ?>
