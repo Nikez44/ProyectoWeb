@@ -40,6 +40,9 @@ include 'daos/show_all_consolas.php';
         <form name="myformModificarJuego" class="myformModificarJuego" method="post" action="daos/actualizarJuego.php" enctype='multipart/form-data'>
             <div class="formulario">
                 <div class="column">
+                    <input type="hidden" name="id" value="<?php echo $juego['id']; ?>"/>
+                    <input type="hidden" name="imagenAnterior" value="<?php echo $juego['imagen']; ?>"/>
+
                     <label>NOMBRE </label><input type="text" id="nombre" name="nombre" class="form-input" value="<?php echo $juego['nombre'] ?>"><br>
 
 
@@ -50,7 +53,7 @@ include 'daos/show_all_consolas.php';
 
 
                     <div id="div_file">
-                        <p id="texto">IMAGEN</p><input  type="file" id="img1" name="img1" required><br>
+                        <p id="texto">IMAGEN</p><input  type="file" id="img1" name="img1" ><br>
                     </div>
 
                     <div>
@@ -79,7 +82,11 @@ include 'daos/show_all_consolas.php';
                                 <option value = "0" id="0" > SELECCIONAR CONSOLA </option>
                                 <?php
                                 foreach ($consolas as $consola) {
-                                    echo '<option value="' . $consola['id'] . '" id="' . $consola['id'] . '" >' . $consola['nombre'] . '</option>';
+                                    if($consola['id'] === $juego['consola_id']){
+                                        echo '<option value="' . $consola['id'] . '" id="' . $consola['id'] . '" selected>' . $consola['nombre'] . '</option>';
+                                    } else {
+                                        echo '<option value="' . $consola['id'] . '" id="' . $consola['id'] . '" >' . $consola['nombre'] . '</option>';
+                                    }
                                 } //end foreach
                                 ?>
                             </select>
@@ -89,7 +96,7 @@ include 'daos/show_all_consolas.php';
 
 
                 </div>
-                <input  type="submit" id="darAlta" name="darAlta" value="Dar alta" class="form-btn">
+                <input  type="submit" id="modificar" name="modificar" value="Actualizar" class="form-btn">
             </div>
         </form>
     </div>

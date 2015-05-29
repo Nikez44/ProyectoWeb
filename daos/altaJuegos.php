@@ -16,8 +16,6 @@ $categoria = $_POST["categoria"];
 $consola = $_POST["consola"];
 
 //SUBIMOS LA IMAGEN
-
-
       if (is_uploaded_file($_FILES['img1']['tmp_name'])){
          
       //recojo la imagen
