@@ -40,7 +40,7 @@ include 'daos/show_all_juegos.php';
                             <div class="Catalog-Console"><h3>Disponible para: <?php echo $juego['nombre_consola'] ?></h3></div>
                             <div class="Catalog-Price"><h3>Precio: <?php echo $juego['precio'] ?></h3></div>
 
-                            <a class="button" href="game.php?g_id=<?php echo $juego['id'] ?>">Comprar</a>
+                            <a class="button" href="game.php?g_id=<?php echo $juego['id'] ?>">Ver</a>
 
                         </div>
                     </li>

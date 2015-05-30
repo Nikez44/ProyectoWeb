@@ -40,8 +40,9 @@ include 'daos/show_all_carrito.php';
         </ul>
     </div>
 
-        <a class="button" href="daos/comprar.php">Comprar</a>
-
+        <?php if($mis_juegos->num_rows !== 0){ ?>
+            <a class="button" href="daos/comprar.php">Comprar</a>
+        <?php } ?>
     </div>
 
     <?php include '_footer.php' ?>
