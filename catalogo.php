@@ -22,26 +22,32 @@ include 'daos/show_all_juegos.php';
 <body>
 
     <?php include '_header.php' ?>
+    <div id="content">
 
-    <div class="catalogo">
-        <ul class="catalog-list" id="triple">
-            <?php foreach($juegos as $juego): ?>
-                <li>
-                    <div class="Catalog-Item">
-                        <div class="Game-Image"><img src=" <?php echo $juego['imagen'] ?> "></div>
-                        <div class="Catalog-Title"><h1><?php echo $juego['nombre'] ?></h1></div>
-                        <div class="Catalog-Category"><h2>Categoria: <?php echo $juego['nombre_categoria'] ?></h2></div>
-                        <div class="Catalog-Console"><h3>Disponible para: <?php echo $juego['nombre_consola'] ?></h3></div>
-                        <div class="Catalog-Price"><h3>Precio: <?php echo $juego['precio'] ?></h3></div>
+        <div class="wrap-title">
+            <h2 class="title">Catalogo</h2>
+            <div class="clear"></div>
+        </div>
 
-                        <a class="button" href="game.php?g_id=<?php echo $juego['id'] ?>">Comprar</a>
+        <div class="catalogo">
+            <ul class="catalog-list" id="triple">
+                <?php foreach($juegos as $juego): ?>
+                    <li>
+                        <div class="Catalog-Item">
+                            <div class="Game-Image"><img src=" <?php echo $juego['imagen'] ?> "></div>
+                            <div class="Catalog-Title"><h1><?php echo $juego['nombre'] ?></h1></div>
+                            <div class="Catalog-Category"><h2>Categoria: <?php echo $juego['nombre_categoria'] ?></h2></div>
+                            <div class="Catalog-Console"><h3>Disponible para: <?php echo $juego['nombre_consola'] ?></h3></div>
+                            <div class="Catalog-Price"><h3>Precio: <?php echo $juego['precio'] ?></h3></div>
 
-                    </div>
-                </li>
-            <?php endforeach ?>
-        </ul>
+                            <a class="button" href="game.php?g_id=<?php echo $juego['id'] ?>">Comprar</a>
+
+                        </div>
+                    </li>
+                <?php endforeach ?>
+            </ul>
+        </div>
     </div>
-
 
 <?php include '_footer.php' ?>
 </body>
