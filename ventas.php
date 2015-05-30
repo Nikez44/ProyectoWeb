@@ -56,6 +56,7 @@ include 'daos/show_ventas.php';
         <tr>
             <td> Juego </td>
             <td> Cantidad </td>
+            <td> Ganancia </td>
         </tr>
         </thead>
 
@@ -66,12 +67,16 @@ include 'daos/show_ventas.php';
                 <tr>
                     <td> <?php echo $venta['nombre'] ?> </td>
                     <td> <?php echo $venta['sum(ventas.cantidad)'] ?> </td>
+                    <td> $<?php echo $venta['sum(ventas.cantidad)']*$venta['precio'] ?> </td>
                 </tr>
-            <?php endforeach;
+            <?php $total = $total + $venta['sum(ventas.cantidad)']*$venta['precio'];
+            endforeach;
         }?>
         </tbody>
 
     </table>
+
+    <p>Ganancia Total del mes: $<?php echo $total ?></p>
 </div>
 
 <?php include '_footer.php'?>
