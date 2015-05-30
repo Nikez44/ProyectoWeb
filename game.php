@@ -29,7 +29,7 @@ include 'daos/search_specific_game.php';
         <img src=" <?php echo $game['imagen'] ?> ">
     </div>
     <div class="info">
-        <h1><?php echo $game['nombre'] ?></h1><br>
+        <h1><?php echo $game['nombre'] ?></h1><br><br/><br/><br/>
         <h2>Categoria: <?php echo $game['nombre_categoria'] ?></h2><br>
         <h3>Disponible para: <?php echo $game['nombre_consola'] ?></h3><br>
         <h3>Precio: <?php echo $game['precio'] ?></h3><br>
