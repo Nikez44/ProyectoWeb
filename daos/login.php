@@ -27,6 +27,6 @@ if($result->num_rows > 0){
     header("Location: ../index.php");
 
 }else{
-    header("Location: ingresa.php?error=1");
+    header("Location: ../mensajes.php?msg=5");
 }
 ?>

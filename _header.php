@@ -33,6 +33,7 @@
             <?php if ($_SESSION['admin'] == 1 ) {?>
                 <li><a href="juegos.php">Juegos</a></li>
                 <li><a href="usuarios.php">Usuarios</a></li>
+                <li><a href="ventas.php">Ventas</a></li>
             <?php } else { ?>
                 <li><a href="carrito.php">Ver Carrito</a></li>
             <?php } ?>

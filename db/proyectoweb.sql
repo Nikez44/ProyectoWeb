@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2015 a las 05:22:09
+-- Tiempo de generación: 30-05-2015 a las 22:19:14
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -79,17 +79,19 @@ CREATE TABLE IF NOT EXISTS `juegos` (
   `imagen` varchar(45) CHARACTER SET utf8 NOT NULL,
   `categoria_id` int(11) NOT NULL DEFAULT '0',
   `consola_id` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `juegos`
 --
 
 INSERT INTO `juegos` (`id`, `nombre`, `precio`, `cantidad`, `imagen`, `categoria_id`, `consola_id`) VALUES
-(1, 'Gears Of War 3', 399.99, 20, 'images/games/946406696.png', 5, 3),
+(1, 'Gears Of War 3', 399.99, 20, 'images/games/568979338.jpg', 5, 3),
 (2, 'Mortal Kombat X', 999.99, 50, 'images/games/654164761.jpg', 1, 2),
-(3, 'FIFA 15', 899.99, 50, 'images/games/572742052.jpg', 3, 4),
-(4, 'Mario Kart 8', 799.99, 50, 'images/games/339991353.jpg', 2, 6);
+(3, 'FIFA 15', 899.99, 60, 'images/games/572742052.jpg', 3, 4),
+(5, 'Super Smash Bros Brawl', 599.9, 90, 'images/games/127483241.jpg', 1, 5),
+(6, 'Mario Kart 8', 999.99, 90, 'images/games/446941233.jpg', 2, 6),
+(7, 'Halo 4', 499.9, 30, 'images/games/578992711.jpg', 5, 3);
 
 -- --------------------------------------------------------
 
@@ -104,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `admin` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -112,7 +114,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `name`, `apellido`, `email`, `password`, `admin`) VALUES
 (1, 'admin', 'admin', 'admin@hotmail.com', 'adminadmin', 1),
-(2, 'cliente', 'cliente', 'cliente@hotmail.com', 'cliente123', 0);
+(2, 'cliente', 'cliente', 'cliente@hotmail.com', 'cliente123', 0),
+(3, 'Oscar', 'Perez', 'nike-o_94@hotmail.com', 'holahola', 0);
 
 -- --------------------------------------------------------
 
@@ -123,9 +126,36 @@ INSERT INTO `usuarios` (`id`, `name`, `apellido`, `email`, `password`, `admin`) 
 CREATE TABLE IF NOT EXISTS `usuarios_has_juegos` (
   `usuarios_id` int(11) NOT NULL,
   `juegos_id` int(11) NOT NULL,
-  `cantidad` varchar(45) DEFAULT NULL,
+  `cantidad` int(11) DEFAULT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ventas`
+--
+
+CREATE TABLE IF NOT EXISTS `ventas` (
+`ventas_id` int(11) NOT NULL,
+  `usuarios_id` int(11) NOT NULL,
+  `juegos_id` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ventas`
+--
+
+INSERT INTO `ventas` (`ventas_id`, `usuarios_id`, `juegos_id`, `cantidad`, `fecha`) VALUES
+(1, 2, 2, 1, '2015-05-30'),
+(2, 2, 3, 2, '2015-05-30'),
+(3, 2, 5, 20, '2015-05-29'),
+(4, 3, 1, 8, '2015-05-29'),
+(5, 3, 3, 4, '2015-05-30'),
+(6, 3, 6, 7, '2015-05-30'),
+(8, 3, 6, 5, '2015-04-15');
 
 --
 -- Índices para tablas volcadas
@@ -162,6 +192,12 @@ ALTER TABLE `usuarios_has_juegos`
  ADD PRIMARY KEY (`usuarios_id`,`juegos_id`), ADD KEY `fk_usuarios_has_juegos_juegos1_idx` (`juegos_id`), ADD KEY `fk_usuarios_has_juegos_usuarios1_idx` (`usuarios_id`);
 
 --
+-- Indices de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+ ADD PRIMARY KEY (`ventas_id`), ADD KEY `usuarios_id` (`usuarios_id`), ADD KEY `juegos_id` (`juegos_id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -169,12 +205,17 @@ ALTER TABLE `usuarios_has_juegos`
 -- AUTO_INCREMENT de la tabla `juegos`
 --
 ALTER TABLE `juegos`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+MODIFY `ventas_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- Restricciones para tablas volcadas
 --
@@ -192,6 +233,13 @@ ADD CONSTRAINT `fk_juegos_consola1` FOREIGN KEY (`consola_id`) REFERENCES `conso
 ALTER TABLE `usuarios_has_juegos`
 ADD CONSTRAINT `fk_usuarios_has_juegos_juegos1` FOREIGN KEY (`juegos_id`) REFERENCES `juegos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD CONSTRAINT `fk_usuarios_has_juegos_usuarios1` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `ventas`
+--
+ALTER TABLE `ventas`
+ADD CONSTRAINT `res1` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `res2` FOREIGN KEY (`juegos_id`) REFERENCES `juegos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

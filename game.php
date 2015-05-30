@@ -39,7 +39,7 @@ include 'daos/search_specific_game.php';
         <label for="g_qty">Cantidad</label>
         <input id="g_qty" name="g_qty" type="number" max="10" min="1" value="1"><br>
 
-        <button type="submit">Comprar</button>
+        <button class="button" type="submit">Comprar</button>
     </div>
 
 

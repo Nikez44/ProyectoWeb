@@ -34,6 +34,12 @@
         echo "<p align='center'><a href='$url'><span style='font-size:28px;'>Volver atr&aacute;s</span></a></p>";?>
     <?php } ?>
 
+    <?php if($_GET['msg'] == 5){ ?>
+        <br><br><p align='center'><span style='color:red;font-size:28px;'>Error de usuario o contraseña</span></p>
+        <?php $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
+        echo "<p align='center'><a href='$url'><span style='font-size:28px;'>Volver atr&aacute;s</span></a></p>";?>
+    <?php } ?>
+
     <?php include '_footer.php'?>
 </body>
 </html>

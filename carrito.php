@@ -40,6 +40,8 @@ include 'daos/show_all_carrito.php';
         </ul>
     </div>
 
+        <a class="button" href="daos/comprar.php">Comprar</a>
+
     </div>
 
     <?php include '_footer.php' ?>
