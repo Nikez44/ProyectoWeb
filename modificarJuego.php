@@ -29,7 +29,7 @@ include 'daos/show_all_consolas.php';
 <?php include '_header.php' ?>
 
 <div class="table_up" id="content">
-    <h2 class="title">Moficiar Juego</h2>
+    <h2 class="title">Modificar Juego</h2>
 
     <a href="juegos.php" class="button btn_table">Regresar</a>
     <div class="clear"></div>

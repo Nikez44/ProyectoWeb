@@ -53,8 +53,8 @@ include 'daos/show_all_usuarios.php';
                     <td> <?php echo $usuario['password'] ?> </td>
                     <td> <?php echo $usuario['admin'] ?> </td>
                     <td>
-                        <a href="#">Modificar</a>
-                        <a href="#">Eliminar</a>
+                        <a href="modificarUsuario.php?id=<?php echo $usuario['id'] ?>">Modificar</a>
+                        <a href="daos/eliminarUsuario.php?id=<?php echo $usuario['id'] ?>">Eliminar</a>
                     </td>
                 </tr>
             <?php endforeach ?>
