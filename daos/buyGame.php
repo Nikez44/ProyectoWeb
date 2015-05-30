@@ -25,5 +25,5 @@ ejecutar_query($queryCompra);
 
 
 
-header('location: catalogo.php');
+header('location: ../catalogo.php');
 ?>
