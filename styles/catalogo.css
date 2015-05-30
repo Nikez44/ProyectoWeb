@@ -1,4 +1,4 @@
-.catalogo{
+.catalogo, .carrito{
     width: 100%;
     margin: 0px;
     display: inline-block;
@@ -6,25 +6,45 @@
 
 }
 
-.catalogo h1{
+.catalogo h1, .carrito h1{
     font-size: 36px;
     color: #283035;
     font-weight: 400;
 }
 
-.catalogo h1 a{
+.catalogo h1 a, .carrito h1 a{
     font-size: 18px;
     font-weight: 700;
 }
 
-.catalog-list{
+.catalog-list, .carrito-list{
     margin-top: 30px;
     position: relative;
 }
 
-.catalogo li{
+.catalogo li, .carrito li{
     float:left;
     display:inline;
+}
+
+#content {
+    width:960px;
+    margin:0 auto;
+    padding:10px 0 20px 0;
+    position:relative;
+}
+
+.title{
+    text-transform: uppercase;
+    display: inline-block;
+    float: left;
+
+    font-size: 40px;
+    margin: 0 0 0 40px;
+}
+
+.wrap-title{
+    border-bottom: solid #ffffff;
 }
 
 /**
@@ -32,7 +52,7 @@
 
 */
 
-.catalog-list .Game-Image{
+.catalog-list .Game-Image, .carrito-list .Game-Image{
     width: 200px;
     height: 300px;
     margin-top: 20px;
@@ -40,24 +60,24 @@
     float: inherit;
 }
 
-.catalog-list .Game-Image img{
+.catalog-list .Game-Image img, .carrito-list .Game-Image img{
     width: 100%;
     height: 100%;
 }
 
-.Catalog-Item .Catalog-Title{
+.Catalog-Item .Catalog-Title, .Carrito-Item .Carrito-Title{
     padding: 12px 12px;
     position: inherit;
     margin: 0;
 }
 
-.Catalog-Item .Catalog-Title h1{
+.Catalog-Item .Catalog-Title h1, .Carrito-Item .Carrito-Title h1{
     float: inherit;
     color: blueviolet;
     margin: 0;
 }
 
-.Catalog-Item .Catalog-Category{
+.Catalog-Item .Catalog-Category, .Carrito-Item .Carrito-Category{
     margin: 0;
     overflow: hidden;
 }
