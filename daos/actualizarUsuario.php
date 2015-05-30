@@ -11,6 +11,6 @@ $password = $_POST["password"];
 $admin = $_POST["admin"];
 
 
-$query = "UPDATE usuarios SET name = '$name', apellido = '$apellido', email = '$email', password = '$password', admin = 'admin' WHERE id = $id";    
+$query = "UPDATE usuarios SET name = '$name', apellido = '$apellido', email = '$email', password = '$password', admin = '$admin' WHERE id = $id";    
     ejecutar_query($query);
     header("Location: ../usuarios.php");
