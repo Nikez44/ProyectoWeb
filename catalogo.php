@@ -26,6 +26,46 @@ include 'daos/show_all_juegos.php';
 
         <div class="wrap-title">
             <h2 class="title">Catalogo</h2>
+            <div class="right">
+                <form action="catalogo.php" method="post">
+                    <?php
+                    $consolas = array( 0 => 'Seleccione una consola',
+                        1 => 'PLAY STATION 3',
+                        2 => 'PLAY STATION 4',
+                        3 => 'XBOX 360',
+                        4 => 'XBOX ONE',
+                        5 => 'WII',
+                        6 => 'WII U');
+
+                    $categorias = array( 0 => 'Seleccione una categoria',
+                        1 => 'LUCHA',
+                        2 => 'CARRERA',
+                        3 => 'DEPORTE',
+                        4 => 'ROL',
+                        5 => 'SHOOTER')
+                    ?>
+                    <select name="consola" id="consola">
+                        <?php foreach($consolas as $val => $c) { ?>
+                            <?php if ($consola == $val) { ?>
+                                <option value="<?php echo $val ?>" selected><?php echo $c ?> </option>
+                            <?php } else { ?>
+                                <option value="<?php echo $val ?>"><?php echo $c ?> </option>
+                            <?php } ?>
+                        <?php } ?>
+                    </select>
+
+                    <select name="categoria" id="categoria">
+                        <?php foreach($categorias as $val => $c) { ?>
+                            <?php if ($categoria == $val) { ?>
+                                <option value="<?php echo $val ?>" selected><?php echo $c ?> </option>
+                            <?php } else { ?>
+                                <option value="<?php echo $val ?>"><?php echo $c ?> </option>
+                            <?php } ?>
+                        <?php } ?>
+                    </select>
+                    <input class="button" type="submit" value="Ver"/>
+                </form>
+            </div>
             <div class="clear"></div>
         </div>
 
