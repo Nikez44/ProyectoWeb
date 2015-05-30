@@ -6,8 +6,6 @@
  * Time: 01:01 PM
  */
 
-
-
 if (isset($_GET['g_id'])){
     $Game_id= $_GET['g_id'];
 

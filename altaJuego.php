@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'daos/global.php';
 include 'daos/show_all_categorias.php';
 include 'daos/show_all_consolas.php';
@@ -31,24 +31,23 @@ include 'daos/show_all_consolas.php';
             <form name="myformAltaJuego" class="myformAltaJuego" method="post" action="daos/altaJuegos.php" enctype='multipart/form-data'>
                 <div class="formulario">
                     <div class="column">
-                        <label>NOMBRE </label><input type="text" id="nombre" name="nombre" class="form-input"><br>
+                        <label>NOMBRE </label><input type="text" id="nombre" name="nombre" class="form-input" required><br>
                 
                 
-                    <label>PRECIO </label><input type="text" id="precio" name="precio" class="form-input"><br>
+                    <label>PRECIO </label><input type="text" id="precio" name="precio" class="form-input" required><br>
                 
                 
-                    <label>CANTIDAD </label><input type="text" id="cantidad" name="cantidad" class="form-input"><br> 
+                    <label>CANTIDAD </label><input type="number" id="cantidad" name="cantidad" class="form-input" min="1" required><br>
                 
                    
                     <div id="div_file">
-                        <p id="texto">IMAGEN</p><input  type="file" id="img1" name="img1" ><br>  
+                        <p id="texto">IMAGEN</p><input  type="file" id="img1" name="img1" required><br>
                     </div>
                     
                     <div>
                         <p>
                     <label>CATEGORIA </label>
-                    <select class="cmbCategoria" name="categoria"   >
-                        <option value = "0" id="0" > SELECCIONAR CATEGORIA </option>
+                    <select class="cmbCategoria" name="categoria" >
                         <?php
                         foreach ($categorias as $categoria) {
                             echo '<option value="' . $categoria['id'] . '" id="' . $categoria['id'] . '" >' . $categoria['nombre'] . '</option>';
@@ -63,7 +62,6 @@ include 'daos/show_all_consolas.php';
                         <p>
                         <label>CONSOLA </label>
                    <select class="cmbConsola" name="consola"  >
-                        <option value = "0" id="0" > SELECCIONAR CONSOLA </option>
                         <?php
                         foreach ($consolas as $consola) {
                             echo '<option value="' . $consola['id'] . '" id="' . $consola['id'] . '" >' . $consola['nombre'] . '</option>';

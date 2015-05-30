@@ -45,14 +45,10 @@ $query = "UPDATE juegos SET nombre = '$nombre', precio = '$precio', cantidad = '
             header("Location: ../juegos.php");
 
         } else {
-            echo "<br><br><p align='center'><span style='color:red;font-size:28px;'>Solo se permiten fotograf&iacute;as .jpg y .png</span></p>";
-            $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
-            echo "<p align='center'><a href='$url'><span style='font-size:28px;'>Volver atr&aacute;s</span></a></p>";
+            header('location: ../mensajes.php?msg=3');
         }
     }else{
-        echo "<br><br><p align='center'><span style='color:red;font-size:28px;'>Imagen muy grande, intenta con una más pequeña</span></p>";
-        $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
-        echo "<p align='center'><a href='$url'><span style='font-size:28px;'>Volver atr&aacute;s</span></a></p>";
+        header('location: ../mensajes.php?msg=4');
     }
 
 }

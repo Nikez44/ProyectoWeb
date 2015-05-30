@@ -12,4 +12,9 @@ if (!isset($_SESSION['login_user'])){
     header("Location: ingresa.php");
 }
 
+if ($_SESSION['admin'] == 1 ) {
+    header('location: mensajes.php?msg=1');
+}
+
+
 ?>

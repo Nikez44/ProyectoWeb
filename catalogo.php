@@ -5,7 +5,7 @@
  * Date: 13/05/2015
  * Time: 07:04 PM
  */
-
+session_start();
 include 'daos/global.php';
 include 'daos/show_all_juegos.php';
 
@@ -35,7 +35,8 @@ include 'daos/show_all_juegos.php';
                         <div class="Catalog-Console"><h3>Disponible para: <?php echo $juego['nombre_consola'] ?></h3></div>
                         <div class="Catalog-Price"><h3>Precio: <?php echo $juego['precio'] ?></h3></div>
 
-                        <button class="button" onclick="location.href = 'game.php?g_id=<?php echo $juego['id'] ?>';">Comprar</button>
+                        <a class="button" href="game.php?g_id=<?php echo $juego['id'] ?>">Comprar</a>
+
                     </div>
                 </li>
             <?php endforeach ?>

@@ -5,9 +5,6 @@
  * Date: 13/05/2015
  * Time: 02:44 PM
  */
-
-session_start();
-
 ?>
 
 <header>

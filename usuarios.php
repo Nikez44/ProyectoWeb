@@ -5,7 +5,7 @@
  * Date: 13/05/2015
  * Time: 07:22 PM
  */
-
+session_start();
 include 'daos/global.php';
 include 'daos/show_all_usuarios.php';
 

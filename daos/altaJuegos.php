@@ -34,17 +34,13 @@ $consola = $_POST["consola"];
             $query = "Insert into juegos (nombre, precio, cantidad, imagen, categoria_id, consola_id) values('$nombre','$precio','$cantidad','$ruta','$categoria','$consola')";
 
             $juegos = ejecutar_query($query);
-            echo "<link rel='stylesheet' href='../styles/index.css'/>";
-            echo "<link rel='stylesheet' href='../styles/tables.css'/>";
-            echo include '../_header.php';
-            echo "<p>EL JUEGO HA SIDO DE ALTA EXITOSAMENTE</p><p><a href='altaJuego.php'>DAR DE ALTA A OTRO JUEGO</a></p>";
-            echo "<p><a href='juegos.php'>MEN� DE JUEGOS</a></p>";
-            echo include '../_footer.php';
+                header('location: ../mensajes.php?msg=2');
             }else{
-                  echo "<br><br><p align='center'><span style='color:red;font-size:28px;'>Solo se permiten fotograf&iacute;as .jpg y .png</span></p>";
-                  echo "<p align='center'><a href='subir_imagenes.php'><span style='font-size:28px;'>Volver atr&aacute;s</span></a></p>";
+                header('location: ../mensajes.php?msg=3');
             }
-      } 
+      }else{
+          header('location: ../mensajes.php?msg=4');
+      }
 
 
 
