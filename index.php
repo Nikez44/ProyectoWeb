@@ -34,17 +34,17 @@
 
         <div class="grid_4 box-1">
             <img src="images/Ferrari-img.jpg" alt="">
-            <a href="#"><span class="clr-1">¡Siente</span> la velocidad!</a>
+            <a href="nfs.php"><span class="clr-1">¡Siente</span> la velocidad!</a>
         </div>
 
         <div class="grid_4 box-1">
             <img src="images/Futbol-img.jpg" alt="">
-            <a href="#"><span class="clr-1">¡Gana</span> la copa!</a>
+            <a href="fifa.php"><span class="clr-1">¡Gana</span> la copa!</a>
         </div>
 
         <div class="grid_4 box-1">
             <img src="images/Heroes-img.jpg" alt="">
-            <a href="#"><span class="clr-1">¡Salva</span> al mundo!</a>
+            <a href="avenger.php"><span class="clr-1">¡Salva</span> al mundo!</a>
         </div>
 
         <div class="grid_12">
