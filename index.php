@@ -66,11 +66,11 @@
         <div class="grid_4">
             <div class="left-1">
 
-                <h2 class="p4">Top Ventas</h2>
+                <h2 class="p4">Top Juegos</h2>
                 <div class="wrap">
                     <div class="number">1</div>
                     <p class="extra-wrap border-bot-1"><span class="clr-1">FIFA 15</span><br>
-                        El juego de futbol mas popular en el mundo:<a href="#" target="_blank" class="link"> FIFA 15</a>  de EA SPORTS. </p>
+                        El juego de futbol mas popular en el mundo:<a href="game.php?g_id=3"  class="link"> FIFA 15</a>  de EA SPORTS. </p>
                 </div>
 
                 <div class="wrap">

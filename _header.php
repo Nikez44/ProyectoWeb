@@ -13,9 +13,9 @@
         <div class="social-icons">
             <span>Siguenos:</span>
             <div>
-                <a href="#" class="icon-3"></a>
-                <a href="#" class="icon-2"></a>
-                <a href="#" class="icon-1"></a>
+                <a href="https://plus.google.com/" class="icon-3"></a>
+                <a href="https://www.facebook.com/" class="icon-2"></a>
+                <a href="https://twitter.com/?lang=es" class="icon-1"></a>
             </div>
         </div>
         <div class="clear"></div>

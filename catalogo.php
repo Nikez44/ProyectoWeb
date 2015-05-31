@@ -35,7 +35,8 @@ include 'daos/show_all_juegos.php';
                         3 => 'XBOX 360',
                         4 => 'XBOX ONE',
                         5 => 'WII',
-                        6 => 'WII U');
+                        6 => 'WII U',
+                        7 => 'PC');
 
                     $categorias = array( 0 => 'Seleccione una categoria',
                         1 => 'LUCHA',
