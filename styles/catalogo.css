@@ -40,11 +40,15 @@
     float: left;
 
     font-size: 40px;
-    margin: 0 0 0 40px;
+    margin: 0 0 20px 40px;
 }
 
 .wrap-title{
     border-bottom: solid #ffffff;
+}
+
+.right{
+    float: right;
 }
 
 /**
