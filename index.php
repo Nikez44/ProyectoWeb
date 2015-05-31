@@ -76,13 +76,13 @@
                 <div class="wrap">
                     <div class="number">2</div>
                     <p class="extra-wrap border-bot-1"><span class="clr-1">HALO 3</span><br>
-                        Juego de una de las sagas survival mas exitosas: <a href="#" target="_blank" class="link"> HALO 3</a> de Microsoft Studios.</p>
+                        Juego de una de las sagas survival mas exitosas: <a href="game.php?g_id=11" class="link"> HALO 3</a> de Microsoft Studios.</p>
                 </div>
 
                 <div class="wrap">
                     <div class="number">3</div>
                     <p class="extra-wrap"><span class="clr-1">NFS RIVALS</span><br>
-                        La entrega mas reciente de la franquicia Need For Speed: <a href="#" class="link"> NFS Rivals </a> de EA.</p>
+                        La entrega mas reciente de la franquicia Need For Speed: <a href="game.php?g_id=9" class="link"> NFS Rivals </a> de EA.</p>
                 </div>
 
             </div>
@@ -94,12 +94,12 @@
                 <div class="wrap border-bot-1">
                     <img src="images/GTA-img.jpg" alt="" class="img-indent">
                     <p class="extra-wrap"><span class="clr-1">¡Por fin para PC!</span><br>
-                        <a href="#" class="link">Ver en catalogo</a><br> Entra y obten la recien liberada GTA 5 para PC.</p>
+                        <a href="game.php?g_id=13" class="link">Ver en catalogo</a><br> Entra y obten la recien liberada GTA 5 para PC.</p>
                 </div>
                 <div class="wrap border-bot-1">
                     <img src="images/Wolf-img.jpeg" alt="" class="img-indent">
                     <p class="extra-wrap"><span class="clr-1">Wolfenstein: the old blood</span><br>
-                        <a href="#" class="link">¡Apartalo ahora!</a><br> La nueva entrega de Wolfenstein sera liberada en Abril, pero en Game Center puedes apartarla ahora.</p>
+                        <a href="game.php?g_id=14" class="link">¡Apartalo ahora!</a><br> La nueva entrega de Wolfenstein sera liberada en Abril, pero en Game Center puedes apartarla ahora.</p>
                 </div>
             </div>
         </div>
