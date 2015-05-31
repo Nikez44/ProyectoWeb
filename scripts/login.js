@@ -9,14 +9,18 @@ function validar(){
 
     if(!validarForm(usuario, contra)){
         return false;
+    }else{
+        if(notSecurePassword(contra)){
+            alert("La contraseña debe ser de almenos 8 caracteres");
+            document.getElementsByName("password").value ="";
+            document.fValida.password.focus();
+            return false;
+        }else{
+            return true;
+        }
     }
 
-    if(notSecurePassword(contra)){
-        alert("La contraseña debe ser de almenos 8 caracteres");
-        document.getElementsByName("password").value ="";
-        document.fValida.password.focus();
-        return false;
-    }
+
 }
 
 function vacio(word) {

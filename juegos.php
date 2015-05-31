@@ -19,7 +19,7 @@ include 'daos/show_all_juegos.php';
 
     <link rel="stylesheet" href="styles/index.css"/>
     <link rel="stylesheet" href="styles/tables.css"/>
-
+    <script type="text/javascript" src="scripts/confirmMessage.js"></script>
 </head>
 <body>
 
@@ -57,7 +57,7 @@ include 'daos/show_all_juegos.php';
                     <td> <?php echo $juego['nombre_consola'] ?> </td>
                     <td>
                         <a href="modificarJuego.php?id=<?php echo $juego['id'] ?>">Modificar</a>
-                        <a href="daos/eliminarJuego.php?id=<?php echo $juego['id'] ?>">Eliminar</a>
+                        <a href="daos/eliminarJuego.php?id=<?php echo $juego['id'] ?>" onclick="return confirmAction()">Eliminar</a>
                     </td>
                 </tr>
             <?php endforeach ?>

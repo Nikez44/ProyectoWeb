@@ -19,6 +19,7 @@ include 'daos/show_all_usuarios.php';
 
     <link rel="stylesheet" href="styles/index.css"/>
     <link rel="stylesheet" href="styles/tables.css"/>
+    <script type="text/javascript" src="scripts/confirmMessage.js"></script>
 </head>
 <body>
 
@@ -54,7 +55,7 @@ include 'daos/show_all_usuarios.php';
                     <td> <?php echo $usuario['admin'] ?> </td>
                     <td>
                         <a href="modificarUsuario.php?id=<?php echo $usuario['id'] ?>">Modificar</a>
-                        <a href="daos/eliminarUsuario.php?id=<?php echo $usuario['id'] ?>">Eliminar</a>
+                        <a href="daos/eliminarUsuario.php?id=<?php echo $usuario['id'] ?>" onclick="return confirmAction()">Eliminar</a>
                     </td>
                 </tr>
             <?php endforeach ?>

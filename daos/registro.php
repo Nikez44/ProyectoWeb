@@ -15,7 +15,13 @@ $password = $_POST['password'];
 $password2 = $_POST['password2'];
 
 if ($nombre == '' or $apellido == '' or $email == '' or $password == '') {
-    echo 'Por favor llene todos los campos.';
+    ?>
+    <script languaje="javascript">
+        alert("Porfavor llene todos los campos.");
+        location.href = "../Registra.php";
+    </script>
+
+<?php
 } else {
 
     $sql = "SELECT * FROM usuarios WHERE email = '$email'";
@@ -27,12 +33,34 @@ if ($nombre == '' or $apellido == '' or $email == '' or $password == '') {
             $sql = "INSERT INTO `proyectoweb`.`usuarios` (`name`, `apellido`, `email`, `password`, `admin`) VALUES ('$nombre', '$apellido', '$email', '$password', '0')";
             ejecutar_query($sql);
 
-            echo 'Usted se ha registrado correctamente.';
+            ?>
+            <script languaje="javascript">
+                alert("Usted se ha registrado correctamentea");
+                location.href = "../login.php";
+            </script>
 
-        } else {
-            echo 'Las claves no son iguales, intente nuevamente.';
+        <?php
+
+        } else {;
+
+            ?>
+            <script languaje="javascript">
+                alert("Las claves no son iguales, intente nuevamente.");
+                location.href = "../Registra.php";
+            </script>
+
+        <?php
+
         }
     } else {
-        echo 'Este usuario ya ha sido registrado anteriormente.';
+
+        ?>
+        <script languaje="javascript">
+            alert("Este usuario ya ha sido registrado anteriormente");
+            location.href = "../Registra.php";
+        </script>
+
+    <?php
+
     }
 }

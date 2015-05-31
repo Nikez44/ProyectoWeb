@@ -16,7 +16,7 @@
         <div class="container_12">
         <h1>Inicia Sesión</h1>
 
-        <form action="daos/login.php" method="post" onsubmit="return validar()">
+        <form name="fValida" action="daos/login.php" method="post" onsubmit="return validar()">
             <table>
                 <tr>
                     <td>
