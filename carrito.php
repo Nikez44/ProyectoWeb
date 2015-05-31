@@ -34,6 +34,8 @@ include 'daos/show_all_carrito.php';
                         <div class="Carrito-Console"><h3>Consola: <?php echo $mi_juego['nombre_consola'] ?></h3></div>
                         <div class="Carrito-Cantidad"><h3>Cantidad: <?php echo $mi_juego['cantidad_carr'] ?></h3></div>
                         <div class="Carrito-Price"><h3>Precio Total: <?php echo ($mi_juego['precio']*$mi_juego['cantidad_carr']) ?></h3></div>
+
+                        <a class="button" href="daos/eliminar_carrito.php?id=<?php echo $mi_juego['juego_id'] ?>"><b>x</b></a>
                     </div>
                 </li>
             <?php endforeach ?>
@@ -41,7 +43,7 @@ include 'daos/show_all_carrito.php';
     </div>
 
         <?php if($mis_juegos->num_rows !== 0){ ?>
-            <a class="button" href="daos/comprar.php">Comprar</a>
+            <a class="button right" href="daos/comprar.php">Comprar</a>
         <?php } ?>
     </div>
 
