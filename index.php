@@ -58,7 +58,7 @@
             <p>¿Eres un aficionado a los juegos?, ¿estas en busca de nuevas experiencias?<br>
                 ¡Conoce nuestra gran variedad de titulos en videojuegos! te garantizamos encontraras
                 algo para ti, ¡forma parte de nosotros!</p>
-            <a href="#" class="button top-3">Registrate</a>
+            <a href="Registra.php" class="button top-3">Registrate</a>
                 ó   
             <a href="ingresa.php" class="button">Ingresa</a>
         </div>

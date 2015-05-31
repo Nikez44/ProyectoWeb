@@ -8,6 +8,8 @@
 session_start();
 include 'daos/global.php';
 include 'daos/show_all_juegos.php';
+include 'daos/show_all_categorias.php';
+include 'daos/show_all_consolas.php';
 
 ?>
 
@@ -28,39 +30,24 @@ include 'daos/show_all_juegos.php';
             <h2 class="title">Catalogo</h2>
             <div class="right">
                 <form action="catalogo.php" method="post">
-                    <?php
-                    $consolas = array( 0 => 'Seleccione una consola',
-                        1 => 'PLAY STATION 3',
-                        2 => 'PLAY STATION 4',
-                        3 => 'XBOX 360',
-                        4 => 'XBOX ONE',
-                        5 => 'WII',
-                        6 => 'WII U',
-                        7 => 'PC');
-
-                    $categorias = array( 0 => 'Seleccione una categoria',
-                        1 => 'LUCHA',
-                        2 => 'CARRERA',
-                        3 => 'DEPORTE',
-                        4 => 'ROL',
-                        5 => 'SHOOTER')
-                    ?>
                     <select name="consola" id="consola">
-                        <?php foreach($consolas as $val => $c) { ?>
-                            <?php if ($consola == $val) { ?>
-                                <option value="<?php echo $val ?>" selected><?php echo $c ?> </option>
+                        <option value="0">Seleccione una consola</option>
+                        <?php foreach($consolas as $c) { ?>
+                            <?php if ($consola == $c['id']) { ?>
+                                <option value="<?php echo $c['id'] ?>" selected><?php echo $c['nombre'] ?> </option>
                             <?php } else { ?>
-                                <option value="<?php echo $val ?>"><?php echo $c ?> </option>
+                                <option value="<?php echo $c['id'] ?>"><?php echo $c['nombre'] ?> </option>
                             <?php } ?>
                         <?php } ?>
                     </select>
 
                     <select name="categoria" id="categoria">
-                        <?php foreach($categorias as $val => $c) { ?>
-                            <?php if ($categoria == $val) { ?>
-                                <option value="<?php echo $val ?>" selected><?php echo $c ?> </option>
+                        <option value="0">Seleccione una categoria</option>
+                        <?php foreach($categorias as $c) { ?>
+                            <?php if ($categoria == $c['id']) { ?>
+                                <option value="<?php echo $c['id'] ?>" selected><?php echo $c['nombre'] ?> </option>
                             <?php } else { ?>
-                                <option value="<?php echo $val ?>"><?php echo $c ?> </option>
+                                <option value="<?php echo $c['id'] ?>"><?php echo $c['nombre'] ?> </option>
                             <?php } ?>
                         <?php } ?>
                     </select>
