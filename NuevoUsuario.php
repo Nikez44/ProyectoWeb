@@ -5,7 +5,7 @@ session_start();
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Registrate</title>
+    <title>Nuevo usuario</title>
     <link rel="stylesheet" href="styles/ingresa.css"/>
     <link rel="stylesheet" href="styles/tables.css"/>
     <link rel="stylesheet" href="styles/formulario.css"/>
@@ -15,9 +15,15 @@ session_start();
 
 <?php include '_header.php' ?>
 
+<div class="table_up" id="content">
+    <h2 class="title">Registrar Usuario</h2>
+
+    <a href="usuarios.php" class="button btn_table">Regresar</a>
+    <div class="clear"></div>
+</div>
+
 <section id="content">
     <div class="container_12">
-        <h1>Registro de usuarios</h1>
         <form action="daos/registro.php" method="post" name="fValida" onsubmit="return validar()">
              <div class="formulario">
                 <div class="column">
@@ -26,10 +32,10 @@ session_start();
                     <label>NOMBRE </label><input type="text" id="Nombre" name="Nombre" class="form-input" ><br>
 
 
-                    <label>APELLIDO </label><input type="text" id="Apellidos" name="Apellidos" class="form-input" ><br>
+                    <label>APELLIDOS </label><input type="text" id="Apellidos" name="Apellidos" class="form-input" ><br>
 
 
-                    <label>CORREO ELECTRONICO </label><input type="text" id="email" name="email" class="form-input" ><br>
+                    <label>CORREO ELECTRONICO </label><input type="email" id="email" name="email" class="form-input" ><br>
 
 
                     <label>CONTRASEÑA </label><input type="password" id="password" name="password" class="form-input" ><br>
@@ -38,13 +44,20 @@ session_start();
                     <label>REPETIR CONTRASEÑA </label><input type="password" id="password2" name="password2" class="form-input" ><br>
 
 
-                    <input type="hidden" id="admin" name="admin" value='0' class="form-input" ><br>
-
-
                 </div>
-                
-                <input  type="submit" id="modificar" name="modificar" value="Registrar" class="form-btn">
-            
+
+                <div>
+                    <p>
+                    <label>ADMIN </label>
+                    <br>
+                    <input id="admin" name="admin" type="radio" value="1" />Si
+                    <br />
+                    <input id="admin" name="admin" type="radio" value="0" checked/>No
+                    <br />
+                    </p>
+                </div>
+
+                <input  type="submit" id="registrar" name="registrar" value="Registrar" class="form-btn">
             </div>
         </form>
     </div>

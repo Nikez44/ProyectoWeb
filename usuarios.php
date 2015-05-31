@@ -28,7 +28,7 @@ include 'daos/show_all_usuarios.php';
     <div class="table_up" id="content">
         <h2 class="title">Usuarios</h2>
 
-        <a href="#" class="button btn_table">Nuevo Usuario</a>
+        <a href="NuevoUsuario.php" class="button btn_table">Nuevo Usuario</a>
         <div class="clear"></div>
     </div>
 

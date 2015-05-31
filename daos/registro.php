@@ -13,6 +13,7 @@ $apellido = $_POST['Apellidos'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 $password2 = $_POST['password2'];
+$admin = $_POST['admin'];
 
 if ($nombre == '' or $apellido == '' or $email == '' or $password == '') {
     ?>
@@ -30,7 +31,7 @@ if ($nombre == '' or $apellido == '' or $email == '' or $password == '') {
     if(!$result->num_rows > 0){
         if($password == $password2){
 
-            $sql = "INSERT INTO `proyectoweb`.`usuarios` (`name`, `apellido`, `email`, `password`, `admin`) VALUES ('$nombre', '$apellido', '$email', '$password', '0')";
+            $sql = "INSERT INTO `proyectoweb`.`usuarios` (`name`, `apellido`, `email`, `password`, `admin`) VALUES ('$nombre', '$apellido', '$email', '$password', '$admin')";
             ejecutar_query($sql);
 
             ?>

@@ -8,6 +8,7 @@ function validar(){
     var mail = document.getElementById("email").value;
     var contra1 = document.getElementById("password").value;
     var contra2 = document.getElementById("password2").value;
+    var Admin = document.getElementById("admin").value;
 
      if(!validarForm(nombre, apellido, mail, contra1, contra2)){
         return false;
@@ -82,6 +83,5 @@ function validarForm(nombre, apellido, mail, contra1, contra2){
         document.fValida.password2.focus();
         return false;
     }
-
     return true;
 }

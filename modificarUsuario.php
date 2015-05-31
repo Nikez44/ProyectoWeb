@@ -37,7 +37,7 @@ include 'daos/encuentraUsuario.php';
                     <label>NOMBRE </label><input type="text" id="name" name="name" class="form-input" value="<?php echo $usuario['name'] ?>"><br>
 
 
-                    <label>APELLIDO </label><input type="text" id="apellido" name="apellido" class="form-input" value="<?php echo $usuario['apellido'] ?>"><br>
+                    <label>APELLIDOS </label><input type="text" id="apellido" name="apellido" class="form-input" value="<?php echo $usuario['apellido'] ?>"><br>
 
 
                     <label>CORREO ELECTRONICO </label><input type="text" id="email" name="email" class="form-input" value="<?php echo $usuario['email'] ?>"><br>
