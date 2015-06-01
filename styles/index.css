@@ -36,6 +36,10 @@ header {
     font-size: 30pt;
 }
 
+.logo{
+    padding-left: .5em;
+}
+
 h1 {
     display: inline-block;
     z-index: 100;

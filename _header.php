@@ -9,7 +9,7 @@
 
 <header>
     <div class="main">
-        <h1><a href="index.php"></a>GAME CENTER</h1>
+        <h1><a href="index.php"></a>GAME CENTER</h1> <img class="logo" src="images/logo2.jpg" width="170" height="100">
         <div class="social-icons">
             <span>Siguenos:</span>
             <div>

@@ -14,6 +14,7 @@ include 'daos/show_all_consolas.php';
         <link rel="stylesheet" href="styles/index.css"/>
         <link rel="stylesheet" href="styles/tables.css"/>
         <link rel="stylesheet" href="styles/formulario.css"/>
+        <script type="text/javascript" src="scripts/altaJuego.js"></script>
         
     </head>
     <body>
@@ -28,7 +29,7 @@ include 'daos/show_all_consolas.php';
     </div>
         <div class="wrap-table" id="content">
         <div id="formAltaJuego" name="formAltaJuego">
-            <form name="myformAltaJuego" class="myformAltaJuego" method="post" action="daos/altaJuegos.php" enctype='multipart/form-data'>
+            <form name="myformAltaJuego" class="myformAltaJuego" method="post" action="daos/altaJuegos.php" enctype='multipart/form-data' >
                 <div class="formulario">
                     <div class="column">
                         <label>NOMBRE </label><input type="text" id="nombre" name="nombre" class="form-input" required><br>
@@ -38,16 +39,13 @@ include 'daos/show_all_consolas.php';
                 
                 
                     <label>CANTIDAD </label><input type="number" id="cantidad" name="cantidad" class="form-input" min="1" required><br>
-                
-                   
-                    <div id="div_file">
-                        <p id="texto">IMAGEN</p><input  type="file" id="img1" name="img1" required><br>
                     </div>
-                    
-                    <div>
+                   
+                    <div class="column2">
+                        
                         <p>
-                    <label>CATEGORIA </label>
-                    <select class="cmbCategoria" name="categoria" >
+                            <label class="lcmb">CATEGORIA </label>
+                            <select class="cmbCategoria" name="categoria" id="categoria" >
                         <?php
                         foreach ($categorias as $categoria) {
                             echo '<option value="' . $categoria['id'] . '" id="' . $categoria['id'] . '" >' . $categoria['nombre'] . '</option>';
@@ -56,12 +54,12 @@ include 'daos/show_all_consolas.php';
                     </select>
                     
                     </p>
-                    </div>
                     
-                    <div>
+                    <br>
+                    
                         <p>
-                        <label>CONSOLA </label>
-                   <select class="cmbConsola" name="consola"  >
+                        <label class="lcmb">CONSOLA </label>
+                        <select class="cmbConsola" name="consola" id="consola" >
                         <?php
                         foreach ($consolas as $consola) {
                             echo '<option value="' . $consola['id'] . '" id="' . $consola['id'] . '" >' . $consola['nombre'] . '</option>';
@@ -69,11 +67,13 @@ include 'daos/show_all_consolas.php';
                         ?> 
                     </select>
                         </p>
+                        <br>
+                        <p><label class="lcmb">IM&Aacute;GEN</label><br><br><input type="file" id="img" class="button" required></p>
                     </div>
                 
                 
                    
-                   </div>
+                   
                    <input  type="submit" id="darAlta" name="darAlta" value="Dar alta" class="form-btn">
                 </div>
             </form>

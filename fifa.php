@@ -2,13 +2,7 @@
 
  
 session_start();
-include 'daos/global.php';
 
-$consultaJuego = "select juegos.id, juegos.nombre, juegos.precio, juegos.cantidad, juegos.imagen, juegos.categoria_id,
-        juegos.consola_id, categoria.nombre AS 'nombre_categoria', consola.nombre AS 'nombre_consola' 
-        from juegos inner join categoria on juegos.categoria_id = categoria.id inner join consola on
-        juegos.consola_id = consola.id where juegos.nombre = 'FIFA 15' ORDER BY `juegos`.`id` ASC";
-$juegos = ejecutar_query($consultaJuego);
 ?>
 
 <!DOCTYPE html>
@@ -31,14 +25,14 @@ $juegos = ejecutar_query($consultaJuego);
 
         <div class="catalogo">
             <ul class="catalog-list" id="triple">
-                <?php foreach($juegos as $juego): ?>
+                
                     <li>
                         <div class="Catalog-Item">
-                            <div class="Game-Image"><img src=" <?php echo $juego['imagen'] ?> "></div>
-                            <div class="Catalog-Title"><h1><?php echo $juego['nombre'] ?></h1></div>
-                            <div class="Catalog-Category"><h2>Categoria: <?php echo $juego['nombre_categoria'] ?></h2></div>
-                            <div class="Catalog-Console"><h3>Disponible para: <?php echo $juego['nombre_consola'] ?></h3></div>
-                            <div class="Catalog-Price"><h3>Precio: <?php echo $juego['precio'] ?></h3></div>
+                            <div class="Game-Image"><img src="images/games/572742052.jpg"></div>
+                            <div class="Catalog-Title"><h1>FIFA 15</h1></div>
+                            <div class="Catalog-Category"><h2>Categoria: DEPORTES</h2></div>
+                            <div class="Catalog-Console"><h3>Disponible para: XBOX 360, PS4</h3></div>
+                            <div class="Catalog-Price"><h3>Precio: $899.99</h3></div>
                             
                             
 
@@ -78,7 +72,7 @@ $juegos = ejecutar_query($consultaJuego);
                         </div>
                     </li>
                     
-                <?php endforeach ?>
+                
             </ul>
             
         </div>
