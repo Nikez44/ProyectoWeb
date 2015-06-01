@@ -23,6 +23,11 @@ include 'daos/show_all_consolas.php';
     <link rel="stylesheet" href="styles/index.css"/>
     <link rel="stylesheet" href="styles/tables.css"/>
     <link rel="stylesheet" href="styles/formulario.css"/>
+    <script>
+        function mostrar(url){
+            window.open(url);
+        }
+    </script>
 </head>
 <body>
 
@@ -51,14 +56,13 @@ include 'daos/show_all_consolas.php';
 
                     <label>CANTIDAD </label><input type="text" id="cantidad" name="cantidad" class="form-input" value="<?php echo $juego['cantidad'] ?>"><br>
 
-
-                    <div id="div_file">
-                        <p id="texto">IMAGEN</p><input  type="file" id="img1" name="img1" ><br>
-                    </div>
-
-                    <div>
+                </div>
+                
+                <div class="column2">
+                        
                         <p>
-                            <label>CATEGORIA </label>
+                            <label class="lcmb">CATEGORIA </label>
+                           
                             <select class="cmbCategoria" name="categoria"   >
                                 <option value = "0" id="0" > SELECCIONAR CATEGORIA </option>
                                 <?php
@@ -71,14 +75,14 @@ include 'daos/show_all_consolas.php';
                                 } //end foreach
                                 ?>
                             </select>
-
-                        </p>
-                    </div>
-
-                    <div>
+                    
+                    </p>
+                    
+                    <br>
+                    
                         <p>
-                            <label>CONSOLA </label>
-                            <select class="cmbConsola" name="consola"  >
+                        <label class="lcmb">CONSOLA </label>
+                        <select class="cmbConsola" name="consola"  >
                                 <option value = "0" id="0" > SELECCIONAR CONSOLA </option>
                                 <?php
                                 foreach ($consolas as $consola) {
@@ -91,11 +95,18 @@ include 'daos/show_all_consolas.php';
                                 ?>
                             </select>
                         </p>
+                        <br>
+                        <button class='button' onclick='mostrar("<?php echo $juego['imagen']; ?>")'>Ver im&aacute;gen actual</button>
+                        <p><label class="lcmb">IM&Aacute;GEN A SUBIR PARA LA MODIFICACI&Oacute;N</label><br><br><input type="file" id="img" class="button" required></p>
                     </div>
+                    
+                        
+                    
+                
 
+                    
 
-
-                </div>
+                
                 <input  type="submit" id="modificar" name="modificar" value="Actualizar" class="form-btn">
             </div>
         </form>

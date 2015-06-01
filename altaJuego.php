@@ -14,7 +14,7 @@ include 'daos/show_all_consolas.php';
         <link rel="stylesheet" href="styles/index.css"/>
         <link rel="stylesheet" href="styles/tables.css"/>
         <link rel="stylesheet" href="styles/formulario.css"/>
-        <script type="text/javascript" src="scripts/altaJuego.js"></script>
+        
         
     </head>
     <body>
