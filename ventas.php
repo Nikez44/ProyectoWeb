@@ -27,7 +27,7 @@ include 'daos/show_ventas.php';
                                 'MAR' => 'Marzo',
                                 'APRIL' => 'Abril',
                                 'MAY' => 'Mayo',
-                                'JUN' => 'Junio',
+                                'JUNE' => 'Junio',
                                 'JUL' => 'Julio',
                                 'AUG' => 'Agosto',
                                 'SEP' => 'Septiembre',
