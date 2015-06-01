@@ -37,12 +37,12 @@ if ($nombre == '' or $apellido == '' or $email == '' or $password == '') {
             ?>
             <script languaje="javascript">
                 alert("Usted se ha registrado correctamentea");
-                location.href = "../login.php";
+                location.href = "../index.php";
             </script>
 
         <?php
 
-        } else {;
+        } else {
 
             ?>
             <script languaje="javascript">
